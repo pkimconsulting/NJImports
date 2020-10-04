@@ -1,0 +1,23 @@
+uuid: f6208b6a-56f2-433c-aa9c-20e07b4119cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_recommended_sales_price
+    - node.type.item
+id: node.item.field_recommended_sales_price
+field_name: field_recommended_sales_price
+entity_type: node
+bundle: item
+label: 'Recommended Sales Price'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

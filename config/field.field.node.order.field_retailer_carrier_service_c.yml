@@ -1,0 +1,19 @@
+uuid: 2bcf3187-37e4-4dbf-aaaa-7ac6f204ae0c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_retailer_carrier_service_c
+    - node.type.order
+id: node.order.field_retailer_carrier_service_c
+field_name: field_retailer_carrier_service_c
+entity_type: node
+bundle: order
+label: 'Retailer Carrier Service Code'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

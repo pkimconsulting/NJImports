@@ -1,0 +1,19 @@
+uuid: 644e9e4b-69d5-40a4-9247-58911abca60f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_retailer_carrier_code
+    - node.type.order
+id: node.order.field_retailer_carrier_code
+field_name: field_retailer_carrier_code
+entity_type: node
+bundle: order
+label: 'Retailer Carrier Code'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

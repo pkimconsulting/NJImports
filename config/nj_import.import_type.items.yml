@@ -1,0 +1,172 @@
+uuid: 029b9d28-a972-4972-b7f6-dc4fe5e1bb33
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.item.field_available_date
+    - field.field.node.item.field_id
+    - field.field.node.item.field_quantity
+    - field.field.node.item.field_recommended_sales_price
+    - field.field.node.item.field_sku
+    - field.field.node.item.field_unit_price
+    - field.field.node.item.field_upc
+    - field.field.node.item.field_url
+    - node.type.item
+  module:
+    - node
+id: items
+label: Items
+description: ''
+help: ''
+import_period: -1
+fetcher: http
+fetcher_configuration:
+  fallback_hub: ''
+  request_timeout: 30
+parser: jsonpath
+parser_configuration:
+  context:
+    value: '*'
+  sources:
+    availablefromdate:
+      label: availableFromDate
+      value: availableFromDate
+    id:
+      label: id
+      value: id
+    productname:
+      label: productName
+      value: productName
+    quantity:
+      label: quantity
+      value: quantity
+    upc:
+      label: upc
+      value: upc
+    sku:
+      label: sku
+      value: sku
+    producturl:
+      label: productUrl
+      value: productUrl
+    recommendedsalesprice:
+      label: recommendedSalesPrice
+      value: recommendedSalesPrice
+    unitprice:
+      label: unitPrice
+      value: unitPrice
+  display_errors: false
+  source_encoding:
+    - auto
+  debug_mode: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  langcode: en
+  update_existing: 2
+  update_non_existent: _keep
+  expire: -1
+  owner_id: 0
+  authorize: true
+  values:
+    type: item
+custom_sources:
+  availablefromdate:
+    label: availableFromDate
+    value: availableFromDate
+    machine_name: availablefromdate
+  id:
+    label: id
+    value: id
+    machine_name: id
+  productname:
+    label: productName
+    value: productName
+    machine_name: productname
+  quantity:
+    label: quantity
+    value: quantity
+    machine_name: quantity
+  upc:
+    label: upc
+    value: upc
+    machine_name: upc
+  sku:
+    label: sku
+    value: sku
+    machine_name: sku
+  producturl:
+    label: productUrl
+    value: productUrl
+    machine_name: producturl
+  recommendedsalesprice:
+    label: recommendedSalesPrice
+    value: recommendedSalesPrice
+    machine_name: recommendedsalesprice
+  unitprice:
+    label: unitPrice
+    value: unitPrice
+    machine_name: unitprice
+mappings:
+  -
+    target: field_available_date
+    map:
+      value: availablefromdate
+    settings:
+      language: ''
+      timezone: UTC
+  -
+    target: field_id
+    map:
+      value: id
+    unique: {  }
+    settings:
+      language: ''
+  -
+    target: title
+    map:
+      value: productname
+    unique:
+      value: '1'
+    settings:
+      language: null
+  -
+    target: field_quantity
+    map:
+      value: quantity
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_upc
+    map:
+      value: upc
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_sku
+    map:
+      value: sku
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_url
+    map:
+      uri: producturl
+      title: ''
+    settings:
+      language: null
+  -
+    target: field_recommended_sales_price
+    map:
+      value: recommendedsalesprice
+    settings:
+      language: null
+  -
+    target: field_unit_price
+    map:
+      value: unitprice
+    settings:
+      language: null

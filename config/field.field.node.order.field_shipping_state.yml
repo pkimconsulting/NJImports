@@ -1,0 +1,19 @@
+uuid: 3a8ce974-0f33-4378-b74a-ca6f377985df
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_shipping_state
+    - node.type.order
+id: node.order.field_shipping_state
+field_name: field_shipping_state
+entity_type: node
+bundle: order
+label: 'Shipping State'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

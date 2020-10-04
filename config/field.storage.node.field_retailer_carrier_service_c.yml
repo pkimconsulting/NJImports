@@ -1,0 +1,21 @@
+uuid: be5d289f-4893-4461-a884-fa1676e1e7de
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_retailer_carrier_service_c
+field_name: field_retailer_carrier_service_c
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

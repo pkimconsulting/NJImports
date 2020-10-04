@@ -1,0 +1,21 @@
+uuid: 60487d21-bc38-4c05-8b6b-adfcd78f220e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_shipping_date
+    - node.type.order
+  module:
+    - datetime
+id: node.order.field_shipping_date
+field_name: field_shipping_date
+entity_type: node
+bundle: order
+label: 'Shipping Date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

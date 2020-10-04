@@ -1,0 +1,5 @@
+name: Nathan James Import Logic for MockAPI module
+description: 'Alters the import with custom logic to change the status if correct units and date for mock API'
+package: Nathan Janes
+type: module
+core_version_requirement: ^8.8 || ^9

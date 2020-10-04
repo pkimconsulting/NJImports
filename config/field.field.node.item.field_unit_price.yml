@@ -1,0 +1,23 @@
+uuid: 3f06f540-b196-4471-854c-82e0b64da2c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_unit_price
+    - node.type.item
+id: node.item.field_unit_price
+field_name: field_unit_price
+entity_type: node
+bundle: item
+label: 'Unit Price'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

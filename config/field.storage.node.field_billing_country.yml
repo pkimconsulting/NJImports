@@ -1,0 +1,21 @@
+uuid: 8216aa1a-1c43-42ee-9431-e454a3f37f7b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_billing_country
+field_name: field_billing_country
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

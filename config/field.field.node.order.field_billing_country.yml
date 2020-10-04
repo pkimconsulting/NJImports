@@ -1,0 +1,19 @@
+uuid: b89e306b-0022-47e3-beed-19165f4affe8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_billing_country
+    - node.type.order
+id: node.order.field_billing_country
+field_name: field_billing_country
+entity_type: node
+bundle: order
+label: 'Billing Country'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

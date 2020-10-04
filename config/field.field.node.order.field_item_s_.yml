@@ -1,0 +1,28 @@
+uuid: 2ce4564d-afa5-43ff-9954-befb7e220d35
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_item_s_
+    - node.type.item
+    - node.type.order
+id: node.order.field_item_s_
+field_name: field_item_s_
+entity_type: node
+bundle: order
+label: Item(s)
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      item: item
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

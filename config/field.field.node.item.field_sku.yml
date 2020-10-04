@@ -1,0 +1,19 @@
+uuid: c0c903e7-191a-4a9f-be7e-6bd6a509cc18
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sku
+    - node.type.item
+id: node.item.field_sku
+field_name: field_sku
+entity_type: node
+bundle: item
+label: SKU
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

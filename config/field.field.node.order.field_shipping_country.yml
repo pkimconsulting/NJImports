@@ -1,0 +1,19 @@
+uuid: 0c614848-1179-4d7a-b2e2-051c7aeeef33
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_shipping_country
+    - node.type.order
+id: node.order.field_shipping_country
+field_name: field_shipping_country
+entity_type: node
+bundle: order
+label: 'Shipping Country'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

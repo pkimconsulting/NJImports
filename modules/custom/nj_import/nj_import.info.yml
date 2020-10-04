@@ -1,0 +1,6 @@
+name: NJImport
+description: 'Allows mapping of various fetchers, parsers, with Drupal entities. Base implemented is only HTTPRequest for the fetcher, JSON (using JSONPath library) as parser, and only a few Drupal integration implemented (text, number, integer, etc)'
+package: NJImport
+type: module
+core_version_requirement: ^8.8 || ^9
+configure: entity.nj_import_import_type.collection

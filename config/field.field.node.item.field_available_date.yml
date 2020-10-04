@@ -1,0 +1,21 @@
+uuid: 27cb3cbf-f2e8-4a10-b262-eaa631116751
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_available_date
+    - node.type.item
+  module:
+    - datetime
+id: node.item.field_available_date
+field_name: field_available_date
+entity_type: node
+bundle: item
+label: 'Available Date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

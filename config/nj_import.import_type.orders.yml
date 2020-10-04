@@ -1,0 +1,170 @@
+uuid: 1ef9c41d-e464-4cc7-beed-b3c4f4db08e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.order.field_billing_address
+    - field.field.node.order.field_billing_city
+    - field.field.node.order.field_billing_country
+    - field.field.node.order.field_billingstate
+    - field.field.node.order.field_id
+    - field.field.node.order.field_item_s_
+    - field.field.node.order.field_shipping_address
+    - field.field.node.order.field_status
+    - node.type.order
+  module:
+    - node
+id: orders
+label: Orders
+description: ''
+help: ''
+import_period: 3600
+fetcher: http
+fetcher_configuration:
+  request_timeout: 30
+parser: jsonpath
+parser_configuration:
+  context:
+    value: '*'
+  sources:
+    id:
+      label: id
+      value: id
+    orderitems_id:
+      label: orderItems.id
+      value: orderItems.id
+    status:
+      label: status
+      value: status
+    billingaddress:
+      label: billingAddress
+      value: billingAddress
+    billingcity:
+      label: billingCity
+      value: billingCity
+    billingcountry:
+      label: billingCountry
+      value: billingCountry
+    billingstate:
+      label: billingState
+      value: billingState
+    shippingaddress:
+      label: shippingAddress
+      value: shippingAddress
+  display_errors: false
+  source_encoding:
+    - auto
+  debug_mode: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  langcode: en
+  update_existing: 2
+  update_non_existent: _keep
+  expire: -1
+  owner_id: 0
+  authorize: true
+  values:
+    type: order
+custom_sources:
+  id:
+    label: id
+    value: id
+    machine_name: id
+  _orderitems_id:
+    label: $.orderItems.id
+    value: $.orderItems.id
+    machine_name: _orderitems_id
+  orderitems_id:
+    label: orderItems.id
+    value: orderItems.id
+    machine_name: orderitems_id
+  status:
+    label: status
+    value: status
+    machine_name: status
+  billingaddress:
+    label: billingAddress
+    value: billingAddress
+    machine_name: billingaddress
+  billingcity:
+    label: billingCity
+    value: billingCity
+    machine_name: billingcity
+  billingcountry:
+    label: billingCountry
+    value: billingCountry
+    machine_name: billingcountry
+  billingstate:
+    label: billingState
+    value: billingState
+    machine_name: billingstate
+  shippingaddress:
+    label: shippingAddress
+    value: shippingAddress
+    machine_name: shippingaddress
+mappings:
+  -
+    target: field_id
+    map:
+      value: id
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_item_s_
+    map:
+      target_id: orderitems_id
+    settings:
+      language: ''
+      reference_by: nid
+      autocreate: 0
+  -
+    target: title
+    map:
+      value: id
+    unique:
+      value: '1'
+    settings:
+      language: null
+  -
+    target: field_status
+    map:
+      value: status
+    settings:
+      language: null
+  -
+    target: field_billing_address
+    map:
+      value: billingaddress
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_billing_city
+    map:
+      value: billingcity
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_billing_country
+    map:
+      value: billingcountry
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_billingstate
+    map:
+      value: billingstate
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_shipping_address
+    map:
+      value: shippingaddress
+    unique: {  }
+    settings:
+      language: null

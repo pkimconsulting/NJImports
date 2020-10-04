@@ -1,0 +1,19 @@
+uuid: a22f4dd2-eed9-4136-8175-cedfcf3c9111
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_billingstate
+    - node.type.order
+id: node.order.field_billingstate
+field_name: field_billingstate
+entity_type: node
+bundle: order
+label: 'Billing State'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
