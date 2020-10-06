@@ -42,8 +42,9 @@ class OrderParser extends PluginBase implements ParserInterface {
           $order->set('status', 'processed');
         }
         else {
-          $order->get('status', 'failed');
+          $order->set('status', 'failed');
         }
+        $order->save()
         $result->addItem($order);
       }
     }
